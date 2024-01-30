@@ -1,0 +1,66 @@
+@use'base/variables' as v;
+@use'base/mixins' as m;
+
+
+.beneficios{
+    width: 100%;
+    background-color: v.$primario;
+    text-align: center;
+    @include m.tablet { 
+        padding: 10rem 0;
+        text-align: left
+     }
+
+    .grid-beneficios{
+        
+       @include m.tablet { 
+        @include m.grid(5,3rem);
+        align-items: center;
+
+        .contenido-beneficios{
+            grid-column: 1/4;
+            
+        }
+
+        .imagen-beneficios{
+            grid-column: 4/6;
+        }
+        }
+    }
+
+
+      
+
+
+
+ 
+    .imagen{
+        margin: 0 auto;
+        transition: transform 300ms ease-in-out ;
+       
+        @include m.tablet { 
+            width: 100%;
+            max-width: 40rem;
+            height: auto;
+          
+         }
+
+         &:hover{
+            transform: rotate(5deg)  scale(1.1);
+         }
+
+
+    }
+    h2{
+        @include m.headingBorder(v.$secundario, v.$blanco);
+        @include m.tablet { 
+            font-size: 3.8rem;
+         }
+         font-size: 2.8rem;
+       }
+
+}
+
+
+
+

@@ -1,0 +1,39 @@
+@use'base/variables' as v;
+@use'base/mixins' as m;
+
+
+.crea-grid{
+    padding: v.$separacion 0;
+  @include m.tablet { 
+    padding: 10rem 0;
+    @include m.grid(2,4rem);
+    align-items: center;
+   }
+   .crea-imagen{
+   img{
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    @include m.tablet { 
+        max-width: 100%;
+        margin-bottom: 0;
+     }
+   }
+   }
+
+   .crea-contenido{
+    text-align: center;
+    @include m.tablet { 
+        text-align: left;
+     }
+ 
+   
+     p{
+      margin: 0;
+      color: v.$secundario;
+     }
+   }
+
+
+   
+}
